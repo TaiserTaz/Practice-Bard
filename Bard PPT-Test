@@ -1,0 +1,56 @@
+Sub CreatePresentation()
+
+'This macro will create a new PowerPoint presentation and add the content that you specified.
+
+'Create a new PowerPoint presentation.
+Set NewPresentation = Application.Presentations.Add
+
+'Add a title slide to the presentation.
+NewPresentation.Slides.Add SlideLayout:=ppLayoutTitle
+
+'Add a title and subtitle to the title slide.
+ActivePresentation.Slides(ActivePresentation.Slides.Count).Shapes("Title 1").TextFrame.TextRange.Text = "Digital Marketing Services"
+ActivePresentation.Slides(ActivePresentation.Slides.Count).Shapes("Subtitle 1").TextFrame.TextRange.Text = "[Your Name]"
+
+'Add a slide about your experience.
+NewPresentation.Slides.Add SlideLayout:=ppLayoutText
+
+'Add text to the slide about your experience as a virtual assistant and digital marketer.
+ActivePresentation.Slides(ActivePresentation.Slides.Count).Shapes("Text Placeholder 1").TextFrame.TextRange.Text = "About Me"
+ActivePresentation.Slides(ActivePresentation.Slides.Count).Shapes("Text Placeholder 2").TextFrame.TextRange.Text = "[Your experience as a virtual assistant and digital marketer]"
+ActivePresentation.Slides(ActivePresentation.Slides.Count).Shapes("Text Placeholder 3").TextFrame.TextRange.Text = "[Your expertise in specific digital marketing areas]"
+ActivePresentation.Slides(ActivePresentation.Slides.Count).Shapes("Text Placeholder 4").TextFrame.TextRange.Text = "[Your track record of success in helping businesses grow]"
+
+'Add a slide about your services.
+NewPresentation.Slides.Add SlideLayout:=ppLayoutText
+
+'Add text to the slide about the digital marketing services that you offer.
+ActivePresentation.Slides(ActivePresentation.Slides.Count).Shapes("Text Placeholder 1").TextFrame.TextRange.Text = "My Services"
+ActivePresentation.Slides(ActivePresentation.Slides.Count).Shapes("Text Placeholder 2").TextFrame.TextRange.Text = "[List of the digital marketing services that you offer]"
+ActivePresentation.Slides(ActivePresentation.Slides.Count).Shapes("Text Placeholder 3").TextFrame.TextRange.Text = "[Brief description of each service]"
+
+'Add a slide with case studies.
+NewPresentation.Slides.Add SlideLayout:=ppLayoutTitleOnly
+
+'Add a title to the slide.
+ActivePresentation.Slides(ActivePresentation.Slides.Count).Shapes("Title 1").TextFrame.TextRange.Text = "Case Studies"
+
+'Add one or more case studies to the slide.
+ActivePresentation.Slides(ActivePresentation.Slides.Count).Shapes("Text Placeholder 1").TextFrame.TextRange.Text = "[Case study 1]"
+ActivePresentation.Slides(ActivePresentation.Slides.Count).Shapes("Text Placeholder 2").TextFrame.TextRange.Text = "[Case study 2]"
+
+'Add a slide about why businesses should choose you.
+NewPresentation.Slides.Add SlideLayout:=ppLayoutText
+
+'Add text to the slide about the reasons why businesses should choose you for their digital marketing needs.
+ActivePresentation.Slides(ActivePresentation.Slides.Count).Shapes("Text Placeholder 1").TextFrame.TextRange.Text = "Why Choose Me?"
+ActivePresentation.Slides(ActivePresentation.Slides.Count).Shapes("Text Placeholder 2").TextFrame.TextRange.Text = "[List of the reasons why businesses should choose you]"
+
+'Add a slide with your contact information.
+NewPresentation.Slides.Add SlideLayout:=ppLayoutText
+
+'Add text to the slide with your contact information (email, phone number, website, etc.).
+ActivePresentation.Slides(ActivePresentation.Slides.Count).Shapes("Text Placeholder 1").TextFrame.TextRange.Text = "Contact Me"
+ActivePresentation.Slides(ActivePresentation.Slides.Count).Shapes("Text Placeholder 2").TextFrame.TextRange.Text = "[Your contact information]"
+
+End Sub
